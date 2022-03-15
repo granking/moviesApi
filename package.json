@@ -1,0 +1,21 @@
+{
+  "name": "moviesapi",
+  "version": "1.0.0",
+  "description": "## Entregable #2: Academlo-Movies",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "Elkin Rey - Granking",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
