@@ -4,8 +4,8 @@
   "description": "## Entregable #2: Academlo-Movies",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "lint": "eslint"
   },
   "keywords": [],
@@ -17,5 +17,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
   }
 }
