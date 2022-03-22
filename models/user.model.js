@@ -10,7 +10,7 @@ const User = sequelize.define('user', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  name: {
+  username: {
     type: DataTypes.STRING(100),
     allowNull: false
   },
@@ -25,7 +25,8 @@ const User = sequelize.define('user', {
   },
   role: {
     type: DataTypes.STRING(10),
-    defaultValue: 'normal'
+    // guest || admin
+    defaultValue: 'guest'
   },
   status: {
     type: DataTypes.STRING(10),
