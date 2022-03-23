@@ -1,14 +1,23 @@
+const dotenv = require('dotenv');
+
+// express app
 const { app } = require('./app');
 
-// Utils
-const { sequelize } = require('./utils/database');
+dotenv.config({ path: './.config.env' });
 
-sequelize
+// Utils
+const { db } = require('./utils/database');
+const { initModel } = require('./utils/initModels')
+
+//Model relations
+initModel();
+
+db
   .authenticate()
   .then(() => console.log('Database authenticated'))
   .catch((err) => console.log(err));
 
-sequelize
+db
   .sync()
   .then(() => console.log('Database synced'))
   .catch((err) => console.log(err));
@@ -16,7 +25,7 @@ sequelize
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-  console.log(`Express app runing on port: ${PORT}`);
+  console.log(`Movie api runing on port: ${PORT}!!!!!!!!`);
 });
 
 
